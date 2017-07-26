@@ -19,6 +19,20 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1"
-  }
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^3.4.1"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EsherApe/dentistBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EsherApe/dentistBlog/issues"
+  },
+  "homepage": "https://github.com/EsherApe/dentistBlog#readme",
+  "description": ""
 }
