@@ -7,10 +7,11 @@ const bodyParser = require('body-parser');
 const sassMiddleware = require('node-sass-middleware');
 
 const index = require('./routes/index');
-const users = require('./routes/users');
-
+const patients = require('./routes/patients');
 const app = express();
 
+// const mongoClient = require('mongodb').MongoClient;
+// const url = "mongodb://localhost:27017/dentist";
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -30,7 +31,8 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
+app.use('/api/patients', patients);
+app.use('/api/patients/:id', patients);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
