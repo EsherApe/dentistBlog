@@ -1,6 +1,6 @@
 {
-  "name": "dentistblog",
-  "version": "0.0.0",
+  "name": "chubarova",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -19,9 +19,22 @@
     "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
+    "autoprefixer": "^6.7.0",
+    "browser-sync": "^2.9.3",
+    "gifsicle": "^3.0.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.4.1",
+    "gulp-watch": "^4.3.5",
+    "gulp.spritesmith": "^6.3.0",
+    "imagemin-pngquant": "^4.2.2",
+    "ngrok": "^2.2.4",
+    "rimraf": "^2.3.1",
     "webpack": "^3.4.1"
   },
   "main": "app.js",

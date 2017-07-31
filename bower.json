@@ -3,7 +3,7 @@
   "description": "",
   "main": "app.js",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/EsherApe/dentistBlog",
   "private": true,
   "ignore": [
     "**/.*",
@@ -11,5 +11,23 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "authors": [
+    "esher <esher5580@gmail.com>"
+  ],
+  "dependencies": {
+    "jquery": "2.2.4",
+    "bootstrap-sass": "^3.3.7",
+    "normalize-css": "^7.0.0",
+    "animate-sass": "^0.6.6",
+    "owl.carousel": "^2.2.1",
+    "magnific-popup": "^1.1.0",
+    "font-awesome": "^4.7.0",
+    "material-design-iconic-font": "^2.2.0",
+    "bootstrap-validator": "^0.11.9",
+    "DirectionAwareHoverEffect": "*",
+    "shufflejs": "3.1.1",
+    "imagesloaded": "^4.1.3",
+    "masonry": "^4.2.0"
+  }
 }
