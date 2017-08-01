@@ -25,8 +25,7 @@ const blog = require('./routes/blog');
 const article = require('./routes/article');
 app.use('/', index);
 app.use('/blog', blog);
-app.use('/blog/:id', article);
-// app.use('/api/patients/:id', patients);
+//app.use('/blog/:id', article);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -43,7 +42,7 @@ app.use((err, req, res, next) => {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error');
+    res.render('error-page');
 });
 
 module.exports = app;

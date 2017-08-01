@@ -1,7 +1,6 @@
 let express = require('express');
 let mongoClient = require('mongodb').MongoClient;
 let router = express.Router();
-let path = require('path');
 
 let url = "mongodb://localhost:27017/blogs";
 

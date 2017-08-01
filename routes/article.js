@@ -31,4 +31,10 @@ let url = "mongodb://localhost:27017/blog/:id";
 //     throw new Error(err);
 // });
 
+router.get('/', (req, res) => {
+
+    res.send('asdads');
+
+});
+
 module.exports = router;
