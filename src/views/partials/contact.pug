@@ -1,0 +1,76 @@
+section.pt-page(data-id='contact')
+    .section-inner.custom-page-content
+        .page-header.color-1
+            h2 Contact
+        .page-content
+            .row
+                .col-sm-6.col-md-6
+                    .block-title
+                        h3
+                            | Get in
+                            span Touch
+                    // Google Map
+                    #map.map
+                    // End of Google Map
+                    .contact-info-block
+                        .ci-icon
+                            i.fa.fa-map-marker
+                        .ci-text
+                            h5 Los Angeles, USA
+                    .contact-info-block
+                        .ci-icon
+                            i.fa.fa-envelope
+                        .ci-text
+                            h5 alexsmith@example.com
+                    .contact-info-block
+                        .ci-icon
+                            i.fa.fa-phone
+                        .ci-text
+                            h5 +123 654 78900
+                    .contact-info-block
+                        .ci-icon
+                            i.fa.fa-check
+                        .ci-text
+                            h5 Freelance Available
+                .col-sm-6.col-md-6
+                    .block-title
+                        h3
+                            | Contact
+                            span Form
+                    form#contact-form(method='post', action='', novalidate='true')
+                        .messages
+                        .controls
+                            .form-group.form-group-with-icon
+                                i.fa.fa-user
+                                label Full Name
+                                input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='Name is required.')
+                                .form-control-border
+                                .help-block.with-errors
+                            .form-group.form-group-with-icon
+                                i.fa.fa-envelope
+                                label Email Address
+                                input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='Valid email is required.')
+                                .form-control-border
+                                .help-block.with-errors
+                            .form-group.form-group-with-icon
+                                i.fa.fa-comment
+                                label Message for Me
+                                textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='Please, leave me a message.')
+                                .form-control-border
+                                .help-block.with-errors
+                            //
+                              <div class="g-recaptcha"
+                              data-sitekey="6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI">
+                              <div style="width: 304px; height: 78px;">
+                              <div>
+                              <iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LdqmCAUAAAAAMMNEZvn6g4W5e0or2sZmAVpxVqI&amp;co=aHR0cDovL2xtcGl4ZWxzLmNvbTo4MA..&amp;hl=ru&amp;v=r20170727143628&amp;size=normal&amp;cb=t8a1w1ic2fj5"
+                              title="виджет reCAPTCHA" width="304" height="78"
+                              frameborder="0" scrolling="no"
+                              sandbox="allow-forms  allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups allow-popups-to-escape-sandbox"></iframe>
+                              </div>
+                              <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                              class="g-recaptcha-response"
+                              style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea>
+                              </div>
+                              </div>
+                            input.button.btn-send.disabled(type='submit', value='Send message')

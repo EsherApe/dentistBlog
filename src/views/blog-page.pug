@@ -1,0 +1,119 @@
+extends layout
+
+block content
+    .single-page-content
+    .content-area
+        .page-content
+            // Blog Entry Content
+            .blog-post-main-image
+                img.post-image.img-responsive(src='images/blog/blog_post_2_full.jpg', alt='blog-post-1')
+            .blog-post-content
+                h1 Bootstrap is the Most Popular HTML, CSS, and JS Framework
+                .entry-meta
+                    span.date
+                        a(href='#')
+                            i.fa.fa-fw.fa-clock-o
+                            |  12 December, 2016
+                    span.divider |
+                    span.autor
+                        a(href='#')
+                            i.fa.fa-fw.fa-user
+                            |  John Doe
+                    span.divider |
+                    span.category
+                        a(href='#')
+                            i.fa.fa-fw.fa-folder
+                            |  jQuery
+                p
+                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a fringilla elit, eu mattis arcu. Curabitur augue augue, scelerisque sit amet varius eget, tristique at nisl. In euismod suscipit tristique. Nulla sollicitudin pretium massa sit amet tristique.
+                p
+                    | Aenean porta quam quis tempus posuere. Integer tempor, elit in auctor scelerisque, arcu augue rhoncus mauris, et hendrerit sem tellus vitae eros. Nulla feugiat ultrices posuere. Nullam aliquet dolor orci. Curabitur tincidunt sem et libero dignissim, sed molestie felis ultricies. Phasellus malesuada tellus vitae eros bibendum, nec ultricies massa sollicitudin. Etiam justo neque, faucibus quis urna interdum, interdum rutrum massa. Mauris et velit ac dolor luctus fringilla. Integer in mattis dui, eget eleifend mauris. Fusce sagittis ipsum nec est finibus, vitae congue nunc elementum. Morbi imperdiet nisl sem, at commodo leo posuere a. Maecenas eu laoreet lorem. Aenean fringilla cursus augue, sed mollis dui.
+                blockquote
+                    p
+                        | Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma - which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition.
+                    footer
+                        cite Steve Jobs
+                p
+                    | Praesent ac quam sed magna gravida interdum. Vivamus sed nunc lobortis, tempor ante ut, gravida nibh. Praesent sed euismod odio. Maecenas dui dui, euismod quis lobortis quis, dignissim ut eros. Curabitur cursus lacinia sollicitudin. Aenean vitae erat imperdiet, egestas nisi non, placerat sapien. In nec commodo justo. Nunc posuere lacinia neque eu malesuada. Sed lacus lacus, tincidunt id faucibus eget, sagittis sed enim. Nunc nec dapibus odio.
+                .entry-meta.entry-tags-share
+                    // Share Buttons
+                    .btn-group.share-buttons.pull-right.hidden-xs
+                        a.btn(href='#', target='_blank')
+                            i.fa.fa-facebook
+                        a.btn(href='#', target='_blank')
+                            i.fa.fa-twitter
+                        a.btn(href='#', target='_blank')
+                            i.fa.fa-dribbble
+                    // /Share Buttons
+                    ul.tags
+                        li
+                            a HTML5
+                        li
+                            a CSS3
+                        li
+                            a jQuery
+                        li
+                            a Ajax
+                        li
+                            a PHP5
+                .post-comments
+                    .block-title
+                        h3 Comments (3)
+                    .media
+                        a.pull-left(href='#')
+                            img.media-object(src='images/blog/comments/comment_photo_1.jpg', alt='')
+                        .media-body
+                            .media-heading
+                                a(href='#') John Doe
+                                span.divider |
+                                span.light-gray 1 hour ago
+                            p
+                                | Nam pellentesque laoreet augue sed facilisis. Suspendisse nec sollicitudin mauris. Integer fringilla a odio sit amet fermentum. Nunc nibh mauris, pretium eu risus et, finibus facilisis lorem.
+                            .media-footer
+                                a(href='#')
+                                    i.fa.fa-reply
+                                    |  Reply
+                            .media
+                                a.pull-left(href='#')
+                                    img.media-object(src='images/blog/comments/comment_photo_2.jpg', alt='')
+                                .media-body
+                                    .media-heading
+                                        a(href='#') Bryan Morris
+                                        span.divider |
+                                        span.light-gray 5 hours ago
+                                    p
+                                        | Donec fermentum elementum massa nec imperdiet. Quisque iaculis accumsan elit eget porttitor.
+                                    .media-footer
+                                        a(href='#')
+                                            i.fa.fa-reply
+                                            |  Reply
+                            .media
+                                a.pull-left(href='#')
+                                    img.media-object(src='images/blog/comments/comment_photo_1.jpg', alt='')
+                                .media-body
+                                    .media-heading
+                                        a(href='#') John Doe
+                                        span.divider |
+                                        span.light-gray 12 hours ago
+                                    p
+                                        | Nulla tincidunt augue lacinia purus scelerisque fringilla. Donec venenatis volutpat lacus, ac efficitur ligula imperdiet id. Nunc gravida ullamcorper metus, ut gravida velit condimentum vel.
+                                    .media-footer
+                                        a(href='#')
+                                            i.fa.fa-reply
+                                            |  Reply
+                .post-comment-add
+                    .block-title
+                        h3 Leave a Comment
+                    form.form-add-comment
+                        .form-group.form-group-with-icon
+                            i.fa.fa-user
+                            label Your Name
+                            input.form-control(placeholder='', name='name')
+                            .form-control-border
+                        .form-group.form-group-with-icon
+                            i.fa.fa-comment
+                            label Message
+                            textarea.form-control(placeholder='', name='message')
+                            .form-control-border
+                        button.button(type='submit') Add comment
+            // End of Blog Entry Content
