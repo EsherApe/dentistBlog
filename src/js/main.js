@@ -22,7 +22,6 @@
                 portfolio_grid.shuffle('update');
             });
 
-
             portfolio_filter.on("click", ".filter", function (e) {
                 portfolio_grid.shuffle('update');
                 e.preventDefault();
@@ -33,7 +32,6 @@
                     subpages_resize();
                 }, 500);
             });
-
         }
     }
     // /Portfolio subpage filters

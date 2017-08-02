@@ -1,26 +1,28 @@
 header#site_header.header.mobile-menu-hide
     .header-content
         .site-title-block.mobile-hidden
-            .site-title
-                | Чубарова
-                span  Наталья
+            .site-title Чубарова #[span Наталья]
         // Navigation
         .site-nav
             // Main menu
             ul#nav.site-main-menu
-                li
-                    a.pt-trigger(href='#home') Главная
-                    // href value = data-id without # of .pt-page.
-                li.active
-                    a.pt-trigger(href='#resume') Опыт
-                li
-                    a.pt-trigger(href='#services') Услуги
-                li
-                    a.pt-trigger(href='#portfolio') Работа
-                li
-                    a.pt-trigger(href='#blog') Блог
-                li
-                    a.pt-trigger(href='#contact') Контакты
+                -
+                    var links = [
+                        {href: '#home', text: 'Главная'},
+                        {href: '#resume', text: 'Опыт'},
+                        {href: '#services', text: 'Услуги'},
+                        {href: '#portfolio', text: 'Работа'},
+                        {href: '#blog', text: 'Блог'},
+                        {href: '#contact', text: 'Контакты'}
+                    ];
+
+                if (mainTitle)
+                    each link in links
+                        li
+                            a.pt-trigger(href=link.href)=link.text
+                else
+                    li
+                        a.pt-trigger(href='/')=links[0].text
             // /Main menu
         // Navigation
 

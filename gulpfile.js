@@ -51,13 +51,13 @@ let path = {
     clean: './public'
 };
 
-gulp.task('webserver', () => {
-    browserSync({
-        server: "./public"
-    }, (err, bs) => {
-        ngrok.connect(bs.options.get('port'), (err, url) => {});
-    });
-});
+// gulp.task('webserver', () => {
+//     browserSync({
+//         server: "./public"
+//     }, (err, bs) => {
+//         ngrok.connect(bs.options.get('port'), (err, url) => {});
+//     });
+// });
 
 gulp.task('clean', (cb) => {
     rimraf(path.clean, cb);
@@ -205,4 +205,4 @@ gulp.task('watch', () => {
     });
 });
 
-gulp.task('default', ['build', 'webserver', 'watch']);
+gulp.task('default', ['build', 'watch']);

@@ -21,11 +21,9 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
-const blog = require('./routes/blog');
 const article = require('./routes/article');
 app.use('/', index);
-app.use('/blog', blog);
-//app.use('/blog/:id', article);
+app.use('/article/:id', article);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
