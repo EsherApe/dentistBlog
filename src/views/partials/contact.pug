@@ -1,12 +1,12 @@
 section.pt-page(data-id='contact')
     .section-inner.custom-page-content
         .page-header.color-1
-            h2 Contact
+            h2 Контакты
         .page-content
             .row
                 .col-sm-6.col-md-6
                     .block-title
-                        h3 Get in #[span Touch]
+                        h3 Клиника на #[span Карте]
                     // Google Map
                     #map.map
                     // End of Google Map
@@ -14,44 +14,44 @@ section.pt-page(data-id='contact')
                         .ci-icon
                             i.fa.fa-map-marker
                         .ci-text
-                            h5 Los Angeles, USA
+                            h5 Одесса, Украина
                     .contact-info-block
                         .ci-icon
                             i.fa.fa-envelope
                         .ci-text
-                            h5 alexsmith@example.com
+                            h5 example@example.com
                     .contact-info-block
                         .ci-icon
                             i.fa.fa-phone
                         .ci-text
-                            h5 +123 654 78900
-                    .contact-info-block
-                        .ci-icon
-                            i.fa.fa-check
-                        .ci-text
-                            h5 Freelance Available
+                            h5 +38 093 575 6401
+                    //.contact-info-block
+                    //    .ci-icon
+                    //        i.fa.fa-check
+                    //    .ci-text
+                    //        h5 Freelance Available
                 .col-sm-6.col-md-6
                     .block-title
-                        h3 Contact #[span Form]
+                        h3 Контактная #[span Форма]
                     form#contact-form(method='post', action='', novalidate='true')
                         .messages
                         .controls
                             .form-group.form-group-with-icon
                                 i.fa.fa-user
-                                label Full Name
-                                input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='Name is required.')
+                                label Полное Имя
+                                input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='Имя обязательно для заполнения.')
                                 .form-control-border
                                 .help-block.with-errors
                             .form-group.form-group-with-icon
                                 i.fa.fa-envelope
-                                label Email Address
-                                input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='Valid email is required.')
+                                label E-mail адрес
+                                input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='Введите действительный e-mail.')
                                 .form-control-border
                                 .help-block.with-errors
                             .form-group.form-group-with-icon
                                 i.fa.fa-comment
-                                label Message for Me
-                                textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='Please, leave me a message.')
+                                label Сообщение для меня
+                                textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='Пожалуйста, введите собщение.')
                                 .form-control-border
                                 .help-block.with-errors
                             //
@@ -69,4 +69,4 @@ section.pt-page(data-id='contact')
                               style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea>
                               </div>
                               </div>
-                            input.button.btn-send.disabled(type='submit', value='Send message')
+                            input.button.btn-send.disabled(type='submit', value='Отправить сообщение')
