@@ -43,7 +43,7 @@
 
         $('#contact-form').on('submit', function (e) {
             if (!e.isDefaultPrevented()) {
-                var url = "contact_form/contact_form.php";
+                var url = "/send";
 
                 $.ajax({
                     type: "POST",
@@ -51,6 +51,7 @@
                     data: $(this).serialize(),
                     success: function (data)
                     {
+                        console.log(data);
                         var messageAlert = 'alert-' + data.type;
                         var messageText = data.message;
 

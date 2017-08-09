@@ -5,7 +5,6 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
-
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -22,8 +21,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 const article = require('./routes/article');
+const mail = require('./routes/mail');
 app.use('/', index);
 app.use('/article/:id', article);
+app.use('/send', mail);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
