@@ -31,11 +31,11 @@ router.post('/', jsonParser, (req, res, next) => {
                 info: error
             });
         } else {
-            console.log('Message sent: ' + info.response);
+            console.log('Message sent: ' + info);
             res.json({
                 type: 'success',
                 message: 'Сообщение успешно отправлено!',
-                info: info.response
+                info: info
             });
         }
     });
