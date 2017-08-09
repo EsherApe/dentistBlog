@@ -22,14 +22,22 @@ router.post('/', jsonParser, (req, res, next) => {
         body: mail.toJSON()
     });
 
-    sg.API(request, function (error, response) {
-        if (error) {
-            console.log('Error response received');
+    sg.API(request, function (error, info) {
+        if(error){
+            console.log(error);
+            res.json({
+                type: 'error',
+                message: 'Произошла ошибка, сообщение не отправлено!',
+                info: error
+            });
+        } else {
+            console.log('Message sent: ' + info.response);
+            res.json({
+                type: 'success',
+                message: 'Сообщение успешно отправлено!',
+                info: info.response
+            });
         }
-        response.body = 'message is delivered!';
-        console.log(response.statusCode);
-        console.log(response.body);
-        console.log(response.headers);
     });
 });
 
