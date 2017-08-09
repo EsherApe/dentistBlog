@@ -13,29 +13,33 @@ router.post('/', jsonParser, (req, res, next) => {
     let transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            user: 'esher5580@gmail.com', // Your email id
-            pass: '55801989esher' // Your password
+            user: 'chubarova.webpage@gmail.com', // Your email id
+            pass: '55801989' // Your password
         }
     });
 
     let mailOptions = {
-        from: req.body.email, // sender address
+        from: ``, // sender address
         to: 'esher5580@gmail.com', // list of receivers
-        subject: `${req.body.name} отправил Вам сообщение через контактную форму!`, // Subject line
-        text: req.body.message //, // plaintext body
-        // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+        subject: `${req.body.name} отправил Вам сообщение через контактную форму!`,
+        //text: req.body.message,
+        html: `<span>${req.body.message}</span><br/><br/><i>написать ответ </i><b>${req.body.email}</b>`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if(error){
             console.log(error);
-            res.json({yo: 'error'});
+            res.json({
+                type: 'error',
+                message: 'Произошла ошибка, сообщение не отправлено!',
+                info: error
+            });
         }else{
             console.log('Message sent: ' + info.response);
             res.json({
                 type: 'success',
                 message: 'Сообщение успешно отправлено!',
-                yo: info.response
+                info: info.response
             });
         }
     });

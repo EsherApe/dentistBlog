@@ -38,10 +38,9 @@
 
     // Contact form validator
     $(function () {
-
-        $('#contact-form').validator();
-
-        $('#contact-form').on('submit', function (e) {
+        var contactForm = $('#contact-form');
+        contactForm.validator();
+        contactForm.on('submit', function (e) {
             if (!e.isDefaultPrevented()) {
                 var url = "/send";
 
@@ -51,21 +50,16 @@
                     data: $(this).serialize(),
                     success: function (data)
                     {
-                        console.log('success');
-                        console.log(data);
-                        var messageAlert = 'alert-' + data.type;
+                        var messageStatus = data.type;
                         var messageText = data.message;
-
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                        if (messageAlert && messageText) {
-                            $('#contact-form').find('.messages').html(alertBox);
-                            if (messageAlert == "alert-success") {
-                                $('#contact-form')[0].reset();
+                        if (messageStatus && messageText) {
+                            toastr[messageStatus](messageText);
+                            if (messageStatus === "success") {
+                                contactForm[0].reset();
                             }
                         }
                     },
                     error: function(err){
-                        console.log('ошибка');
                         console.log(err);
                     },
                 });
