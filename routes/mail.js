@@ -8,28 +8,36 @@ const bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
 
 router.post('/', jsonParser, (req, res, next) => {
-    const helper = require('sendgrid').mail;
-    const fromEmail = new helper.Email(req.body.email);
-    const toEmail = new helper.Email('esher5580@gmail.com');
-    const subject = `Письмо с персональной странички от ${req.body.name}`;
-    const content = new helper.Content('text/plain', req.body.message);
-    const mail = new helper.Mail(fromEmail, subject, toEmail, content);
-    const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+    let nodemailer = require('nodemailer');
 
-    let request = sg.emptyRequest({
-        method: 'POST',
-        path: '/v3/mail/send',
-        body: mail.toJSON()
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'esher5580@gmail.com', // Your email id
+            pass: '55801989esher' // Your password
+        }
     });
 
-    sg.API(request, function (error, response) {
-        if (error) {
-            console.log('Error response received');
+    let mailOptions = {
+        from: req.body.email, // sender address
+        to: 'esher5580@gmail.com', // list of receivers
+        subject: `${req.body.name} отправил Вам сообщение через контактную форму!`, // Subject line
+        text: req.body.message //, // plaintext body
+        // html: '<b>Hello world ✔</b>' // You can choose to send an HTML body instead
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error){
+            console.log(error);
+            res.json({yo: 'error'});
+        }else{
+            console.log('Message sent: ' + info.response);
+            res.json({
+                type: 'success',
+                message: 'Сообщение успешно отправлено!',
+                yo: info.response
+            });
         }
-        response.body = 'message is delivered!';
-        console.log(response.statusCode);
-        console.log(response.body);
-        console.log(response.headers);
     });
 });
 

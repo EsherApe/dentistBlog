@@ -51,6 +51,7 @@
                     data: $(this).serialize(),
                     success: function (data)
                     {
+                        console.log('success');
                         console.log(data);
                         var messageAlert = 'alert-' + data.type;
                         var messageText = data.message;
@@ -62,7 +63,11 @@
                                 $('#contact-form')[0].reset();
                             }
                         }
-                    }
+                    },
+                    error: function(err){
+                        console.log('ошибка');
+                        console.log(err);
+                    },
                 });
                 return false;
             }
