@@ -1,4 +1,4 @@
-###Commands for heroku command-line
+### Commands for heroku command-line
 
 ```bash
 $ heroku login
@@ -11,27 +11,27 @@ $ heroku logs --tail        #- (logger)
 $ heroku local web          #- (run the app locally)
 ```
 
-####Deploy
+#### Deploy
 ```bash
 $ git add .
 $ git commit -m " "
 $ git push heroku master
 ```
 
-####Addons
+#### Addons
 ```bash
 $ heroku addons:create papertrail
 $ heroku addons
 $ heroku addons:open papertrail
 ```
 
-####Console
+#### Console
 ```bash
 $ heroku run node
 $ heroku run bash
 ```
 
-####Define config vars
+#### Define config vars
 ```bash
 
 ```
