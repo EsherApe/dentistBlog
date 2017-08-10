@@ -8,21 +8,25 @@ const bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
 
 router.post('/', jsonParser, (req, res, next) => {
-    const helper = require('sendgrid').mail;
-    const fromEmail = new helper.Email(req.body.email);
-    const toEmail = new helper.Email('esher5580@gmail.com');
-    const subject = `Письмо с персональной странички от ${req.body.name}`;
-    const content = new helper.Content('text/plain', req.body.message);
-    const mail = new helper.Mail(fromEmail, subject, toEmail, content);
-    const sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+    let nodemailer = require('nodemailer');
 
-    let request = sg.emptyRequest({
-        method: 'POST',
-        path: '/v3/mail/send',
-        body: mail.toJSON()
+    let transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: 'chubarova.webpage@gmail.com', // Your email id
+            pass: '55801989' // Your password
+        }
     });
 
-    sg.API(request, function (error, info) {
+    let mailOptions = {
+        from: ``, // sender address
+        to: 'esher5580@gmail.com', // list of receivers
+        subject: `${req.body.name} отправил Вам сообщение через контактную форму!`,
+        //text: req.body.message,
+        html: `<span>${req.body.message}</span><br/><br/><i>написать ответ </i><b>${req.body.email}</b>`
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
         if(error){
             console.log(error);
             res.json({
@@ -30,12 +34,12 @@ router.post('/', jsonParser, (req, res, next) => {
                 message: 'Произошла ошибка, сообщение не отправлено!',
                 info: error
             });
-        } else {
-            console.log('Message sent: ' + info);
+        }else{
+            console.log('Message sent: ' + info.response);
             res.json({
                 type: 'success',
                 message: 'Сообщение успешно отправлено!',
-                info: info
+                info: info.response
             });
         }
     });

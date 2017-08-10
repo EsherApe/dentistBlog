@@ -145,7 +145,8 @@ gulp.task('concatPlug:css', () => {
         bower('material-design-iconic-font/dist/css/material-design-iconic-font.min.css'),
         bower('owl.carousel/dist/assets/owl.carousel.min.css'),
         bower('magnific-popup/dist/magnific-popup.css'),
-        bower('DirectionAwareHoverEffect/css/style.css')
+        bower('DirectionAwareHoverEffect/css/style.css'),
+        bower('toastr/toastr.min.css')
     ])
         .pipe(concat('components.min.css'))
         .pipe(cleanCSS({compatibility: 'ie8'}))
@@ -163,7 +164,8 @@ gulp.task('concatPlug:js', () => {
         bower('DirectionAwareHoverEffect/js/jquery.hoverdir.js'),
         bower('shufflejs/dist/jquery.shuffle.min.js'),
         bower('imagesloaded/imagesloaded.pkgd.min.js'),
-        bower('masonry/dist/masonry.pkgd.min.js')
+        bower('masonry/dist/masonry.pkgd.min.js'),
+        bower('toastr/toastr.min.js')
     ])
         .pipe(concat('components.min.js'))
         .pipe(uglify().on('error', (e) => {
