@@ -12,8 +12,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 
-// const mongoClient = require('mongodb').MongoClient;
-// const url = "mongodb://localhost:27017/dentist";
+const mongoClient = require('mongodb').MongoClient;
+const url = "mongodb://localhost:27017/dentist";
+
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'src/views'));
