@@ -27,14 +27,14 @@ router.post('/', jsonParser, (req, res, next) => {
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
-        if(error){
+        if (error) {
             console.log(error);
             res.json({
                 type: 'error',
                 message: 'Произошла ошибка, сообщение не отправлено!',
                 info: error
             });
-        }else{
+        } else {
             console.log('Message sent: ' + info.response);
             res.json({
                 type: 'success',
