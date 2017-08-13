@@ -8,13 +8,13 @@ const bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
 
 router.post('/', jsonParser, (req, res, next) => {
-    let api_key = MAILGUN_API_KEY;
-    let domain = DOMAIN_NAME;
+    let api_key = 'key-8d0c9854286f5eb588bf523c6f58af21';
+    let domain = 'chubarova.com.ua';
     let mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
      
     let data = {
       from: `${req.body.name} ${req.body.email}`,
-      to: EMAIL_NAME,
+      to: 'esher5580@gmail.com',
       subject: 'Запрос с персональной странички!',
       text: req.body.message
     };
