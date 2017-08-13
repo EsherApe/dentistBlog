@@ -8,25 +8,18 @@ const bodyParser = require('body-parser');
 let jsonParser = bodyParser.json();
 
 router.post('/', jsonParser, (req, res, next) => {
-    let nodemailer = require('nodemailer');
-
-    let transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: 'chubarova.webpage@gmail.com', // Your email id
-            pass: '55801989' // Your password
-        }
-    });
-
-    let mailOptions = {
-        from: ``, // sender address
-        to: 'esher5580@gmail.com', // list of receivers
-        subject: `${req.body.name} отправил Вам сообщение через контактную форму!`,
-        //text: req.body.message,
-        html: `<span>${req.body.message}</span><br/><br/><i>написать ответ </i><b>${req.body.email}</b>`
+    let api_key = MAILGUN_API_KEY;
+    let domain = DOMAIN_NAME;
+    let mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+     
+    let data = {
+      from: `${req.body.name} ${req.body.email}`,
+      to: EMAIL_NAME,
+      subject: 'Запрос с персональной странички!',
+      text: req.body.message
     };
-
-    transporter.sendMail(mailOptions, (error, info) => {
+     
+    mailgun.messages().send(data, function (error, info) {
         if (error) {
             console.log(error);
             res.json({
