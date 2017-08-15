@@ -11,7 +11,7 @@ function myMap() {
     var map = new google.maps.Map(mapCanvas, mapOptions);
     var marker = new google.maps.Marker({
         position: myCenter,
-        icon: '../../img/map-marker.png'
+        icon: '../static/img/map-marker.png'
     });
     marker.setMap(map);
 }

@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'src', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
@@ -18,13 +18,14 @@ const url = "mongodb://localhost:27017/dentist";
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/static', express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');
 const article = require('./routes/article');
 const mail = require('./routes/mail');
+
 app.use('/', index);
-app.use('/article/:id', article);
+app.use('/article', article);
 app.use('/send', mail);
 
 // catch 404 and forward to error handler

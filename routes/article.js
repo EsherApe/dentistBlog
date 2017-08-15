@@ -1,13 +1,10 @@
 let express = require('express');
-let mongoClient = require('mongodb').MongoClient;
 let router = express.Router();
 
-let url = "mongodb://localhost:27017/blog/:id";
-
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
 
     res.render('article-page', {
-        imgUrl: '/img/blog/blog_post_2_full.jpg',
+        imgUrl: '/static/img/blog/blog_post_2_full.jpg',
         articleTitle: 'Bootstrap is the Most Popular HTML, CSS, and JS Framework',
         date: '12 December, 2016',
         author: 'John Doe',

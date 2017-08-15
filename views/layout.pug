@@ -9,31 +9,31 @@ html(lang='en')
         meta(name='keywords', content='vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio')
         meta(name='author', content='lmtheme')
         link(rel='shortcut icon', href='favicon.ico')
-        link(rel='stylesheet', href='css/components.min.css', type='text/css')
-        link(rel='stylesheet', href='css/style.min.css', type='text/css')
+        link(rel='stylesheet', href='/static/css/components.min.css', type='text/css')
+        link(rel='stylesheet', href='/static/css/style.min.css', type='text/css')
         script(src='http://code.jquery.com/jquery-2.1.3.min.js', integrity='sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM=', crossorigin='anonymous')
-        script(src='js/modernizr.custom.js')
+        script(src='/static/js/modernizr.custom.js')
     body.material-template
         // Loading animation
         .preloader
             .preloader-animation
                 .preloader-spinner
-        // /Loading animation
+        // Loading animation
         #page.page
             // Header
             include partials/header
-            // /Header
+            // Header
             // Main Content
             #main.site-main
                 // Page changer wrapper
                 .pt-wrapper
-                    //Content
+                    // Content
                     block content
-                    // /Content
-                // /Page changer wrapper
-            // /Main Content
+                    // Content
+                // Page changer wrapper
+            // Main Content
         include partials/footer
-        script(type='text/javascript', src='js/components.min.js')
-        script(type='text/javascript', src='js/script.min.js')
+        script(type='text/javascript', src='/static/js/components.min.js')
+        script(type='text/javascript', src='/static/js/script.min.js')
         script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAib0jnhRrfpGV2cjOp-eEFe9siMUcU7N0&callback=myMap')
         #page-ajax-loaded
