@@ -4,20 +4,29 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const nconf = require('./config');
+const log = require('./libs/log');
 const app = express();
 
 app.use(favicon(path.join(__dirname, 'src', 'favicon.ico')));
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(cookieParser());
 
-const mongoClient = require('mongodb').MongoClient;
-const url = "mongodb://localhost:27017/dentist";
+if (app.get('env') == 'development') {
+    app.use(logger('dev'));
+} else {
+    app.use(logger('default'));
+}
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+app.use(cookieParser());
 
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
+
+// static
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 const index = require('./routes/index');

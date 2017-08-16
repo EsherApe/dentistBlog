@@ -7,12 +7,13 @@
 const app = require('../app');
 const debug = require('debug')('dentistblog:server');
 const http = require('http');
+const nconf = require('../config');
 
 /**
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || nconf.get('port'));
 app.set('port', port);
 
 /**
@@ -65,11 +66,11 @@ function onError(error) {
   // handle specific listen errors with friendly messages
   switch (error.code) {
     case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
+      console.log(bind + ' requires elevated privileges');
       process.exit(1);
       break;
     case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
+      console.log(bind + ' is already in use');
       process.exit(1);
       break;
     default:

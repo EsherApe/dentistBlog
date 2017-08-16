@@ -17,12 +17,14 @@
     "express": "~4.15.2",
     "mailgun-js": "^0.12.1",
     "mongodb": "^2.2.30",
-    "mongoose": "^4.11.4",
+    "mongoose": "^4.11.7",
     "morgan": "~1.8.1",
+    "nconf": "^0.8.4",
     "node-sass-middleware": "0.9.8",
     "nodemailer": "^4.0.1",
     "pug": "^2.0.0-rc.2",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.0",
