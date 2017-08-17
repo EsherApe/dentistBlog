@@ -10,7 +10,7 @@ const app = express();
 
 app.use(favicon(path.join(__dirname, 'src', 'favicon.ico')));
 
-if (app.get('env') == 'development') {
+if (app.get('env') === 'development') {
     app.use(logger('dev'));
 } else {
     app.use(logger('default'));

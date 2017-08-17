@@ -5,164 +5,21 @@ section.pt-page(data-id='blog')
         .page-content
             // Blog Posts Grid
             .blog-masonry.two-columns
-                // Blog Post 1
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_1.jpg', alt='blog-post-1')
-                                .mask
-                                .post-date
-                                    span.day 6
-                                    span.month Dec
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') Travel
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | Bootstrap is the Most
-                                    | Popular Framework
-                // End of Blog Post 1
-                // Blog Post 2
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_2.jpg', alt='blog-post-2')
-                                .mask
-                                .post-date
-                                    span.day 3
-                                    span.month Nov
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') jQuery
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | One Framework, Every
-                                    | Device
-                // End of Blog Post 2
-                // Blog Post 3
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_3.jpg', alt='blog-post-3')
-                                .mask
-                                .post-date
-                                    span.day 12
-                                    span.month Oct
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') Sport
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | Designed for
-                                    | Everyone, Everywhere
-                // End of Blog Post 3
-                // Blog Post 4
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_4.jpg', alt='blog-post-4')
-                                .mask
-                                .post-date
-                                    span.day 18
-                                    span.month Aug
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') CSS
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | An Introduction To
-                                    | PostCSS
-                // End of Blog Post 4
-                // Blog Post 5
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_5.jpg', alt='blog-post-5')
-                                .mask
-                                .post-date
-                                    span.day 2
-                                    span.month Jul
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') CSS3
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | Original and
-                                    | Innovative Web Layouts
-                // End of Blog Post 5
-                // Blog Post 6
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_6.jpg', alt='blog-post-6')
-                                .mask
-                                .post-date
-                                    span.day 8
-                                    span.month May
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') HTML5
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | Creative and
-                                    | Innovative Navigation Designs
-                // End of Blog Post 6
-                // Blog Post 7
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_7.jpg', alt='blog-post-7')
-                                .mask
-                                .post-date
-                                    span.day 7
-                                    span.month Apr
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') Design
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | Navigation for
-                                    | Mega-Sites
-                // End of Blog Post 7
-                // Blog Post 8
-                .item
-                    .blog-card
-                        .media-block
-                            a(href='/article/' + articleId)
-                                img.post-image.img-responsive(src='/static/img/blog/blog_post_8.jpg', alt='blog-post-8')
-                                .mask
-                                .post-date
-                                    span.day 21
-                                    span.month Mar
-                                    // <span class="year">2016</span>
-                        .post-info
-                            ul.category
-                                li
-                                    a(href='#') CSS3
-                            a(href='/article/' + articleId)
-                                h4.blog-item-title
-                                    | Front-End Challenge
-                                    | Accepted: CSS 3D Cube
-                // End of Blog Post 8
+                - for( var i = 0; i < articles.length; i++ )
+                    .item
+                        .blog-card
+                            .media-block
+                                a(href='/article/' + articles[i]._id)
+                                    img.post-image.img-responsive(src= articles[i].imgUrl, alt= articles[i].title)
+                                    .mask
+                                    .post-date
+                                        span.day= publishDates[i].day
+                                        span.month= publishDates[i].month
+                                        span.year= publishDates[i].year
+                            .post-info
+                                ul.category
+                                    li
+                                        a(href='#')= articles[i].category
+                                a(href='/article/' + articles[i]._id)
+                                    h4.blog-item-title= articles[i].title
             // Blog Posts Grid

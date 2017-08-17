@@ -15,7 +15,6 @@ let gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css'),
     //Other
-    pug = require('gulp-pug'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     rimraf = require('rimraf'),
@@ -24,14 +23,12 @@ let gulp = require('gulp'),
 
 let path = {
     build: {
-        pug: 'public/',
         js: 'public/js/',
         css: 'public/css/',
         img: 'public/img/',
         fonts: 'public/fonts/'
     },
     src: {
-        pug: 'src/templates/*.pug',
         js: ['src/js/**/*.js', '!src/js/modernizr.custom.js'],
         jsModernizr: 'src/js/modernizr.custom.js',
         style: 'src/css/*.scss',
@@ -41,7 +38,6 @@ let path = {
         fonts: ['src/fonts/**/*.*', './bower_components/font-awesome/fonts/**/*.{ttf,woff,woff2,eot,otf,svg}']
     },
     watch: {
-        pug: 'src/**/*.pug',
         js: 'src/js/**/*.js',
         style: 'src/css/**/*.scss',
         img: 'src/img/**/*.*',
@@ -94,13 +90,6 @@ gulp.task('image:build', () => {
 gulp.task('fonts:build', () => {
     return gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
-});
-
-gulp.task('pug:build', () => {
-    return gulp.src(path.src.pug)
-        .pipe( pug( {pretty: true}))
-        .pipe(gulp.dest(path.build.pug))
-        .pipe(reload({stream: true}));
 });
 
 gulp.task('js:build', () => {
@@ -175,7 +164,6 @@ gulp.task('concatPlug:js', () => {
 });
 
 gulp.task('build', [
-    'pug:build',
     'js:build',
     'js:build:modernizr',
     'style:build',
@@ -187,9 +175,6 @@ gulp.task('build', [
 ]);
 
 gulp.task('watch', () => {
-    watch([path.watch.pug], (event, cb) => {
-        gulp.start('pug:build');
-    });
     watch([path.watch.style], (event, cb) => {
         gulp.start('style:build');
     });
