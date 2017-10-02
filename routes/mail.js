@@ -28,6 +28,7 @@ router.post('/', jsonParser, (req, res, next) => {
                 info: error
             });
         } else {
+            console.log(info);
             console.log('Message sent: ' + info.response);
             res.json({
                 type: 'success',
