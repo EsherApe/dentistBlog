@@ -173,269 +173,71 @@ var PageTransitions = (function ($, options) {
 
         switch (selectedAnimNumber) {
             case 1:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 2:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 3:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 4:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 5:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 6:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 7:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 8:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 9:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 10:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 11:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 12:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 13:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 14:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 15:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 16:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 17:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 18:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 19:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 20:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 21:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 22:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 23:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 24:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 25:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 26:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 27:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 28:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 29:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 30:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 31:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 32:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 33:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 34:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 35:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 36:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 37:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 38:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 39:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 40:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 41:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 42:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 43:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 44:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 45:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 46:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 47:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 48:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 49:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 50:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 51:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 52:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 53:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 54:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 55:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 56:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 57:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 58:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 59:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 60:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 61:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 62:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 63:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 64:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 65:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 66:
-                inClass = 'pt-page-moveFromBottomFade';
-                outClass = 'pt-page-fade';
-                break;
             case 67:
                 inClass = 'pt-page-moveFromBottomFade';
                 outClass = 'pt-page-fade';
