@@ -33,6 +33,37 @@ html(lang='en')
                 // Page changer wrapper
             // Main Content
         include partials/footer
+        #modal-id.modal.fade
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+                        h4.modal-title Контактная #[span Форма]
+                    .modal-body
+                        form#contact-form(method='post', action='', novalidate='true')
+                            .messages
+                            .controls
+                                .form-group.form-group-with-icon
+                                    i.fa.fa-user
+                                    label Полное Имя
+                                    input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='Имя обязательно для заполнения.')
+                                    .form-control-border
+                                    .help-block.with-errors
+                                .form-group.form-group-with-icon
+                                    i.fa.fa-envelope
+                                    label E-mail адрес
+                                    input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='Введите действительный e-mail.')
+                                    .form-control-border
+                                    .help-block.with-errors
+                                .form-group.form-group-with-icon
+                                    i.fa.fa-comment
+                                    label Сообщение для меня
+                                    textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='Пожалуйста, введите собщение.')
+                                    .form-control-border
+                                    .help-block.with-errors
+                    .modal-footer(style='border: 0')
+                        a.btn.btn-secondary(type='button', data-dismiss='modal', style='margin-right: 15px') Закрыть
+                        input.button.btn-send.disabled(type='submit', value='Отправить сообщение')
         script(type='text/javascript', src='/static/js/components.min.js')
         script(type='text/javascript', src='/static/js/script.min.js')
         script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAib0jnhRrfpGV2cjOp-eEFe9siMUcU7N0&callback=myMap')
