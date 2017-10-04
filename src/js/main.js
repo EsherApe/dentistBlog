@@ -38,9 +38,11 @@
 
     // Contact form validator
     $(function () {
-        var contactForm = $('#contact-form');
+        var contactModal = $('.contact-modal');
+        var contactForm = $('.contact-form');
         contactForm.validator();
         contactForm.on('submit', function (e) {
+            var targetForm = $(e.target);
             if (!e.isDefaultPrevented()) {
                 var url = "/send";
 
@@ -55,7 +57,8 @@
                         if (messageStatus && messageText) {
                             toastr[messageStatus](messageText);
                             if (messageStatus === "success") {
-                                contactForm[0].reset();
+                                contactModal.modal('hide');
+                                targetForm[0].reset();
                             }
                         }
                     },

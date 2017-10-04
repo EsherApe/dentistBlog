@@ -1,21 +1,20 @@
 require('dotenv').config();
 
 const express = require('express');
-const app = express();
 const router = express.Router();
 const bodyParser = require('body-parser');
 // create application/json parser
 let jsonParser = bodyParser.json();
 
 router.post('/', jsonParser, (req, res, next) => {
-    let api_key = 'key-8d0c9854286f5eb588bf523c6f58af21';
-    let domain = 'chubarova.com.ua';
+    let api_key = process.env.MAILGUN_API_KEY;
+    let domain = process.env.MAILGUN_API_DOMAIN;
     let mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
      
     let data = {
       from: `${req.body.name} ${req.body.email}`,
-      to: 'esher5580@gmail.com',
-      subject: 'Запрос с персональной странички!',
+      to: process.env.MAILGUN_API_TO,
+      subject: 'Запись на прием!',
       text: req.body.message
     };
      
@@ -28,8 +27,6 @@ router.post('/', jsonParser, (req, res, next) => {
                 info: error
             });
         } else {
-            console.log(info);
-            console.log('Message sent: ' + info.response);
             res.json({
                 type: 'success',
                 message: 'Сообщение успешно отправлено!',
