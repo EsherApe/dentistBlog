@@ -1,25 +1,25 @@
-section.pt-page(data-id='blog')
-    .section-inner.custom-page-content
-        .page-header.color-1
-            h2 Блог
-        .page-content
-            // Blog Posts Grid
-            .blog-masonry.two-columns
-                - for( var i = 0; i < articles.length; i++ )
-                    .item
-                        .blog-card
-                            .media-block
-                                a(href='/article/' + articles[i]._id)
-                                    img.post-image.img-responsive(src= articles[i].imgUrl, alt= articles[i].title)
-                                    .mask
-                                    .post-date
-                                        span.day= publishDates[i].day
-                                        span.month= publishDates[i].month
-                                        span.year= publishDates[i].year
-                            .post-info
-                                ul.category
-                                    li
-                                        a(href='#')= articles[i].category
-                                a(href='/article/' + articles[i]._id)
-                                    h4.blog-item-title= articles[i].title
+//section.pt-page(data-id='blog')
+//    .section-inner.custom-page-content
+//        .page-header.color-1
+//            h2 Блог
+//        .page-content
+//            // Blog Posts Grid
+//            .blog-masonry.two-columns
+//                - for( var i = 0; i < articles.length; i++ )
+//                    .item
+//                        .blog-card
+//                            .media-block
+//                                a(href='/article/' + articles[i]._id)
+//                                    img.post-image.img-responsive(src= articles[i].imgUrl, alt= articles[i].title)
+//                                    .mask
+//                                    .post-date
+//                                        span.day= publishDates[i].day
+//                                        span.month= publishDates[i].month
+//                                        span.year= publishDates[i].year
+//                            .post-info
+//                                ul.category
+//                                    li
+//                                        a(href='#')= articles[i].category
+//                                a(href='/article/' + articles[i]._id)
+//                                    h4.blog-item-title= articles[i].title
             // Blog Posts Grid
