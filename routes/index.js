@@ -28,7 +28,7 @@ router.get('/', (req, res, next) => {
         }
 
         res.render('main-page', {
-            mainTitle: 'Чубарова Наталья',
+            mainTitle: 'Natalya Chubarova',
             articles: articles,
             publishDates: getFormatedDates()
         });

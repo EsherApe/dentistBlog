@@ -1,12 +1,12 @@
 section.pt-page(data-id='contact')
     .section-inner.custom-page-content
         .page-header.color-1
-            h2 Контакты
+            h2 Contacts
         .page-content
             .row
                 .col-sm-6.col-md-6
                     .block-title
-                        h3 Клиника на #[span Карте]
+                        h3 Address on #[span Map]
                     // Google Map
                     #map.map
                     // End of Google Map
@@ -14,7 +14,7 @@ section.pt-page(data-id='contact')
                         .ci-icon
                             i.fa.fa-map-marker
                         .ci-text
-                            h5 Одесса, Украина
+                            h5 Odessa, Ukraine
                     .contact-info-block
                         .ci-icon
                             i.fa.fa-envelope
@@ -34,26 +34,26 @@ section.pt-page(data-id='contact')
                     //        h5 Freelance Available
                 .col-sm-6.col-md-6
                     .block-title
-                        h3 Контактная #[span Форма]
+                        h3 Contact #[span Form]
                     form.contact-form(method='post', action='', novalidate='true')
                         .messages
                         .controls
                             .form-group.form-group-with-icon
                                 i.fa.fa-user
-                                label Полное Имя
-                                input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='Имя обязательно для заполнения.')
+                                label Full Name
+                                input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='required')
                                 .form-control-border
                                 .help-block.with-errors
                             .form-group.form-group-with-icon
                                 i.fa.fa-envelope
-                                label E-mail адрес
-                                input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='Введите действительный e-mail.')
+                                label E-mail address
+                                input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='invalid e-mail.')
                                 .form-control-border
                                 .help-block.with-errors
                             .form-group.form-group-with-icon
                                 i.fa.fa-comment
-                                label Сообщение для меня
-                                textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='Пожалуйста, введите собщение.')
+                                label Text message
+                                textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='fill your message, please')
                                 .form-control-border
                                 .help-block.with-errors
-                            input.button.btn-send.disabled(type='submit', value='Отправить сообщение')
+                            input.button.btn-send.disabled(type='submit', value='Send message')

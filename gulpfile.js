@@ -77,7 +77,7 @@ gulp.task('sprites:build', () => {
 
 gulp.task('image:build', () => {
     return gulp.src(path.src.img)
-        .pipe(imagemin({
+        .pipe(imagemin([],{
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()],
