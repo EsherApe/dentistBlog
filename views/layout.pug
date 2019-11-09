@@ -48,31 +48,31 @@ html(lang='en')
                 .modal-content
                     .modal-header
                         button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
-                        h4.modal-title Контактная #[span Форма]
+                        h4.modal-title Contact #[span Form]
                     .modal-body
                         form.contact-form(method='post', action='', novalidate='true')
                             .messages
                             .controls
                                 .form-group.form-group-with-icon
                                     i.fa.fa-user
-                                    label Полное Имя
-                                    input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='Имя обязательно для заполнения.')
+                                    label Full name
+                                    input#form_name.form-control(type='text', name='name', placeholder='', required='required', data-error='required')
                                     .form-control-border
                                     .help-block.with-errors
                                 .form-group.form-group-with-icon
                                     i.fa.fa-envelope
-                                    label E-mail адрес
-                                    input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='Введите действительный e-mail.')
+                                    label E-mail address
+                                    input#form_email.form-control(type='email', name='email', placeholder='', required='required', data-error='invalid e-mail')
                                     .form-control-border
                                     .help-block.with-errors
                                 .form-group.form-group-with-icon
                                     i.fa.fa-comment
-                                    label Сообщение для меня
-                                    textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='Пожалуйста, введите собщение.')
+                                    label Text message
+                                    textarea#form_message.form-control(name='message', placeholder='', rows='4', required='required', data-error='fill your message, please')
                                     .form-control-border
                                     .help-block.with-errors
-                                a.btn.btn-secondary(type='button', data-dismiss='modal', style='margin-right: 15px') Закрыть
-                                input.button.btn-send.disabled(type='submit', value='Отправить сообщение')
+                                a.btn.btn-secondary(type='button', data-dismiss='modal', style='margin-right: 15px') Close
+                                input.button.btn-send.disabled(type='submit', value='Send message')
 
         script(type='text/javascript', src='/static/js/components.min.js')
         script(type='text/javascript', src='/static/js/script.min.js')
